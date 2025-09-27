@@ -11,9 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 2. THEME TOGGLE ---
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
-
-    // Load saved theme from localStorage
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('theme') || 'light';
     html.setAttribute('data-theme', savedTheme);
 
     themeToggle.addEventListener('click', () => {
@@ -30,18 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('mousemove', (e) => {
         const posX = e.clientX;
         const posY = e.clientY;
-
         cursorDot.style.left = `${posX}px`;
         cursorDot.style.top = `${posY}px`;
-
         cursorOutline.animate({
             left: `${posX}px`,
             top: `${posY}px`
         }, { duration: 500, fill: "forwards" });
     });
 
-    // Add interaction effect
-    document.querySelectorAll('a, button, .skill-card, .project-card').forEach(el => {
+    document.querySelectorAll('a, button, .project-card, .service-card, .testimonial-card').forEach(el => {
         el.addEventListener('mouseenter', () => cursorOutline.classList.add('cursor-interact'));
         el.addEventListener('mouseleave', () => cursorOutline.classList.remove('cursor-interact'));
     });
@@ -49,11 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 4. HEADER SCROLL EFFECT ---
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        header.classList.toggle('scrolled', window.scrollY > 50);
     });
 
     // --- 5. MOBILE MENU ---
@@ -66,20 +57,41 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', () => mobileMenu.classList.remove('active'));
     });
 
-    // --- 6. SCROLL-TO-TOP BUTTON ---
+    // --- 6. MODAL HANDLING ---
+    const setupModal = (buttonId, modalId) => {
+        const viewBtn = document.getElementById(buttonId);
+        const modal = document.getElementById(modalId);
+
+        if (!viewBtn || !modal) return;
+
+        const closeModalBtn = modal.querySelector('.modal-close-btn');
+
+        const openModal = () => modal.classList.add('active');
+        const closeModal = () => modal.classList.remove('active');
+
+        viewBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    };
+
+    setupModal('view-project-one-btn', 'project-one-modal');
+    setupModal('view-designs-btn', 'design-modal');
+    setupModal('view-project-three-btn', 'project-three-modal');
+
+    // --- 7. SCROLL-TO-TOP BUTTON ---
     const scrollToTopBtn = document.getElementById('scroll-to-top');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
+        scrollToTopBtn.classList.toggle('visible', window.scrollY > 300);
     });
     scrollToTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // --- 7. ACTIVE NAV LINK ON SCROLL ---
+    // --- 8. ACTIVE NAV LINK ON SCROLL ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.main-nav a, .mobile-nav a');
 
@@ -87,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 150) {
+            if (pageYOffset >= sectionTop - 150) { 
                 current = section.getAttribute('id');
             }
         });

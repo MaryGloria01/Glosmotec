@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
     <link rel="stylesheet" href="Portfolio.css">
 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -24,18 +25,19 @@
             <a href="#" class="logo">OG.</a>
             <nav class="main-nav">
                 <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#services" class="nav-link">Services</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Experience</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
             <div class="header-actions">
                 <div class="social-links-header">
-                    <a href="https://www.linkedin.com/in/ogochukwu-gloriamary" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                    <a href="https://github.com/MaryGloria01" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
-                    <a href="https://x.com/MaryGloria01" target="_blank" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/ogochukwu-gloriamary" target="_blank" aria-label="LinkedIn" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    <a href="https://github.com/MaryGloria01" target="_blank" aria-label="GitHub" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+                    <a href="https://x.com/MaryGloria01" target="_blank" aria-label="Twitter" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></a>
                 </div>
-                <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
                 <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
                     <i class="sun-icon" data-lucide="sun"></i>
                     <i class="moon-icon" data-lucide="moon"></i>
@@ -46,59 +48,74 @@
             </div>
         </div>
     </header>
+    
     <div id="mobile-menu" class="mobile-nav">
         <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#services" class="nav-link">Services</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
         <a href="#experience" class="nav-link">Experience</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
         <a href="#contact" class="nav-link">Contact</a>
     </div>
 
     <main>
         <section id="home" class="hero">
-            <div class="container hero-container" data-aos="fade-up">
-                <h1 class="hero-title">Nwanochiri Ogochukwu Gloria</h1>
-                <p class="subtitle">Creative Technologist</p>
-                <p class="hero-text">
-                    Curious innovator with a background in software engineering, AI, and graphic design, passionate about building technology that makes a real impact.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <div class="hero-bg-elements"></div>
+            <div class="container hero-container">
+                <div class="hero-content" data-aos="fade-up">
+                    <p class="subtitle">Creative Technologist & Designer</p>
+                    <h1 class="hero-title">Nwanochiri Ogochukwu GloriaMary</h1>
+                    <p class="hero-text">
+                        I craft beautiful and intelligent digital experiences. Fusing software engineering with a passion for design to build technology that makes a real impact.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
                 </div>
-            </div>
-            <div class="scroll-down-indicator">
-                <a href="#about" aria-label="Scroll down">
-                    <i data-lucide="arrow-down"></i>
-                </a>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container about-container">
-                <div class="about-image" data-aos="fade-right" data-aos-delay="200">
-                    <img src="https://placehold.co/400x400/1E293B/94A3B8?text=Your+Photo" alt="Ogochukwu Gloria">
-                </div>
-                <div class="about-content" data-aos="fade-left" data-aos-delay="400">
-                    <h2 class="section-title">About Me</h2>
-                    <p>My passion for technology goes beyond academics. As a student and professional, I'm constantly exploring the intersection of design and functionality. Whether it's crafting intuitive user interfaces, developing intelligent systems with AI, or creating compelling visual identities, I thrive on solving complex problems with creative solutions.</p>
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="Images/Image3.png" alt="A female developer working on a laptop">
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="skills">
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                <div class="about-content-grid">
+                    <div class="about-image" data-aos="fade-right">
+                        <img src="C:\Users\ogoch\OneDrive\Glosmotec_Website\My_Portfolio_Website\Images\ProfilePic.JPG" alt="Nwanochiri Ogochukwu GloriaMary - Profile">
+                    </div>
+                    <div class="about-text" data-aos="fade-left">
+                        <p>Hello! I'm Nwanochiri Ogochukwu GloriaMary, a passionate Creative Technologist with a unique blend of skills in software engineering, UI/UX design and graphic design. My journey in technology is driven by a desire to craft digital experiences that are not only beautiful and intuitive but also intelligent and impactful.</p>
+                        <p>With a foundation in Computer Science and a certificate in Software Engineering from ALX Africa, I specialize in building responsive web applications using modern technologies like HTML5, CSS3, JavaScript and React.js. My design expertise allows me to create compelling visual identities, ensuring that every project looks as good as it performs.</p>
+                        <p>I thrive in dynamic environments, constantly seeking new knowledge and opportunities to innovate. Whether it's developing robust web solutions or designing engaging user interfaces, I'm committed to delivering high-quality results that make a difference.</p>
+                        <a href="C:\Users\ogoch\OneDrive\Glosmotec_Website\My_Portfolio_Website\My Cv.pdf.pdf" class="btn btn-primary" download data-aos="fade-up" data-aos-delay="200">Download CV <i data-lucide="download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
             <div class="container" data-aos="fade-up">
-                <h2 class="section-title">My Skillset</h2>
-                <div class="skills-grid">
-                    <div class="skill-card"><i data-lucide="layout-template"></i><span>Web Design</span></div>
-                    <div class="skill-card"><i data-lucide="brain-circuit"></i><span>AI Enthusiast</span></div>
-                    <div class="skill-card"><i data-lucide="palette"></i><span>Graphic Design</span></div>
-                    <div class="skill-card"><i data-lucide="lightbulb"></i><span>Creativity</span></div>
-                    <div class="skill-card"><i data-lucide="search-check"></i><span>Critical Thinking</span></div>
-                    <div class="skill-card"><i data-lucide="users-2"></i><span>Teamwork</span></div>
-                    <div class="skill-card"><i data-lucide="message-circle"></i><span>Communication</span></div>
-                    <div class="skill-card"><i data-lucide="award"></i><span>Leadership</span></div>
-                    <div class="skill-card"><i data-lucide="list-checks"></i><span>Organized</span></div>
+                <h2 class="section-title">What I Do</h2>
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="layout-template"></i>
+                        <h3>Web Development</h3>
+                        <p>Building responsive, user-friendly websites with modern technologies.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <i data-lucide="palette"></i>
+                        <h3>UI/UX & Graphic Design</h3>
+                        <p>Creating intuitive interfaces and captivating visual identities.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <i data-lucide="brain-circuit"></i>
+                        <h3>AI Integration</h3>
+                        <p>Developing intelligent systems for real-world applications.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -109,41 +126,111 @@
                 <div class="project-grid">
                     <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="project-image">
-                            <img src="https://placehold.co/600x400/1E293B/58A6FF?text=Project+One" alt="Project 1">
+                            <img src="Images/ecommerce.png" alt="E-commerce platforms icon">
                         </div>
                         <div class="project-content">
                             <div class="project-tags"><span>UI/UX</span><span>Web Development</span></div>
                             <h3 class="project-title">E-commerce Platforms</h3>
-                            <p class="project-description">A full-stack e-commerce website with payment integration and a custom CMS.</p>
+                            <p class="project-description">A full-stack e-commerce website with payment integration.</p>
                             <div class="project-links">
-                                <a href="#" class="btn-link" target="_blank">Live Demo <i data-lucide="external-link"></i></a>
+                                <button id="view-project-one-btn" class="btn-link">Click To View Projects<i data-lucide="eye"></i></button>
                                 <a href="#" class="btn-link" target="_blank">View Code <i data-lucide="github"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                          <div class="project-image">
-                            <img src="https://placehold.co/600x400/58A6FF/0D1117?text=Project+Two" alt="Project 2">
+                            <img src="Images/branddesign.png" alt="Client branding icon">
                         </div>
                         <div class="project-content">
                             <div class="project-tags"><span>Branding</span><span>Graphic Design</span></div>
                             <h3 class="project-title">Client Logo & Branding</h3>
-                            <p class="project-description">Created a full brand identity for a local startup, including logo, color palette, and typography.</p>
+                            <p class="project-description">Full brand identity for a startup, including logo and color palette.</p>
                              <div class="project-links">
-                                <a href="#" class="btn-link" target="_blank">View Designs<i data-lucide="external-link"></i></a>
+                                <button id="view-designs-btn" class="btn-link">Click To View Designs <i data-lucide="eye"></i></button>
                             </div>
                         </div>
                     </div>
                     <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                          <div class="project-image">
-                            <img src="https://placehold.co/600x400/0D1117/94A3B8?text=Project+Three" alt="Project 3">
+                            <img src="Images/portfoliowebsites.png" alt="Portfolio websites icon">
                         </div>
                         <div class="project-content">
                             <div class="project-tags"><span>Web Design</span><span>Frontend</span></div>
-                            <h3 class="project-title">Portfolio Websites For Clients</h3>
-                            <p class="project-description">Showcasing user-friendly portfolio websites designed to highlight clients’ skills, achievements and professional identity with a modern digital presence.</p>
+                            <h3 class="project-title">Portfolio Websites</h3>
+                            <p class="project-description">User-friendly portfolio websites to highlight clients’ skills.</p>
                              <div class="project-links">
-                                <a href="#" class="btn-link" target="_blank">Live Demo <i data-lucide="external-link"></i></a>
+                                <button id="view-project-three-btn" class="btn-link"> Click To View Project <i data-lucide="eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-intro">
+                    A look at the key technical and professional skills I've developed. I'm always eager to learn and adapt to new technologies.
+                </p>
+                <h3 class="skills-subtitle">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fab fa-html5"></i><p>HTML5</p></div>
+                    <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+                    <div class="skill-card"><i class="fab fa-js-square"></i><p>JavaScript</p></div>
+                    <div class="skill-card"><i class="fab fa-react"></i><p>React.js</p></div>
+                    <div class="skill-card"><i class="fas fa-code-branch"></i><p>Git & Version Control</p></div>
+                    <div class="skill-card"><i class="fas fa-bolt"></i><p>API Integration</p></div>
+                </div>
+                <h3 class="skills-subtitle">Professional Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fas fa-users"></i><p>Leadership</p></div>
+                    <div class="skill-card"><i class="fas fa-tasks"></i><p>Management</p></div>
+                    <div class="skill-card"><i class="fas fa-lightbulb"></i><p>Problem Solving</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section-title">My Journey</h2>
+                <div class="experience-container">
+                    <div class="experience-column">
+                        <h3 class="experience-subheading">Professional Experience</h3>
+                        <div class="experience-list">
+                            <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+                                <p class="experience-date">Jan 2021 - Present</p>
+                                <h4 class="experience-title">Freelance Graphic Designer</h4>
+                                <p class="experience-company">Glosmotec</p>
+                                <p class="experience-description">Created compelling visual designs, including logos and flyers, for various clients to enhance their brand identity.</p>
+                            </div>
+                            <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+                                <p class="experience-date">Jan 2020 - Dec 2021</p>
+                                <h4 class="experience-title">Sales Representative</h4>
+                                <p class="experience-company">Dubros International Agency, Nigeria</p>
+                                <p class="experience-description">Engaged with clients, provided product demonstrations, and drove sales growth through excellent customer service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-column">
+                        <h3 class="experience-subheading">Education & Leadership</h3>
+                        <div class="experience-list">
+                            <div class="experience-item" data-aos="fade-up" data-aos-delay="300">
+                                <p class="experience-date">2024 - Present</p>
+                                <h4 class="experience-title">BSc in Computer Science</h4>
+                                <p class="experience-company">University of Kigali</p>
+                            </div>
+                            <div class="experience-item" data-aos="fade-up" data-aos-delay="400">
+                                <p class="experience-date">2022 - 2023</p>
+                                <h4 class="experience-title">Software Engineering Certificate</h4>
+                                <p class="experience-company">ALX Africa</p>
+                            </div>
+                            <div class="experience-item" data-aos="fade-up" data-aos-delay="500">
+                                <p class="experience-date">2018 - 2019</p>
+                                <h4 class="experience-title">Academic Prefect</h4>
+                                <p class="experience-company">Mater Christi Sec. Sch. Nigeria</p>
+                                <p class="experience-description">Led student leaders and served as a liaison between students and school administration.</p>
                             </div>
                         </div>
                     </div>
@@ -151,31 +238,28 @@
             </div>
         </section>
 
-        <section id="experience" class="experience">
+        <section id="testimonials" class="testimonials">
             <div class="container" data-aos="fade-up">
-                <div class="title-wrapper">
-                    <h2 class="section-title">My Journey</h2>
-                </div>
-                <div class="timeline">
-                     <div class="timeline-item" data-aos="fade-right">
-                        <div class="timeline-content">
-                            <p class="timeline-date">2024 - Present</p>
-                            <h3>BSc in Computer Science</h3>
-                            <p class="timeline-company">University of Kigali</p>
+                <h2 class="section-title">Kind Words From Clients</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"GloriaMary is an absolute pleasure to work with. Her creativity and attention to detail are unmatched. She transformed our vision into a stunning reality in the form of graphics!"</p>
+                        <div class="testimonial-author">
+                            <img src="C:\Users\ogoch\OneDrive\Glosmotec_Website\My_Portfolio_Website\Images\Chomzy.PNG" alt="Author 1">
+                            <div>
+                                <h4 class="author-name">Ezeugo Chioma Juliet</h4>
+                                <p class="author-title">CEO, Chomzy Hairs</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item" data-aos="fade-left">
-                         <div class="timeline-content">
-                            <p class="timeline-date">2022 - 2023</p>
-                            <h3>Software Engineering Certificate</h3>
-                            <p class="timeline-company">ALX Africa</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-aos="fade-right">
-                         <div class="timeline-content">
-                            <p class="timeline-date">Jan 2021 - Present</p>
-                            <h3>Freelance Graphic Designer</h3>
-                            <p class="timeline-company">Glosmotec</p>
+                     <div class="testimonial-card">
+                        <p class="testimonial-text">"The website she designed exceeded all our expectations. It's not only beautiful but also incredibly fast and user-friendly. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="C:\Users\ogoch\OneDrive\Glosmotec_Website\My_Portfolio_Website\Images\Egbo.png" alt="Author 2">
+                            <div>
+                                <h4 class="author-name">Egbo Chidiebere</h4>
+                                <p class="author-title">Founder, Selgo Designs.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,8 +268,8 @@
 
         <section id="contact" class="contact">
             <div class="container contact-container" data-aos="fade-up">
-                <h2 class="section-title">Get In Touch</h2>
-                <p>I'm currently open to new opportunities and collaborations. My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <h2 class="section-title">Let's Create Together</h2>
+                <p>I'm currently open to new opportunities and collaborations. My inbox is always open. Whether you have a question or just want to say hi, I will definitely get back to you!</p>
                 <a href="mailto:ogochukwunwanochiri@gmail.com" class="btn btn-primary email-btn">
                     <i data-lucide="mail"></i> Say Hello
                 </a>
@@ -196,20 +280,57 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-social">
-                <a href="https://www.linkedin.com/in/ogochukwu-gloriamary" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                <a href="https://github.com/MaryGloria01" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
-                <a href="https://x.com/MaryGloria01" target="_blank" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ogochukwu-gloriamary" target="_blank" aria-label="LinkedIn" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                <a href="https://github.com/MaryGloria01" target="_blank" aria-label="GitHub" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+                <a href="https://x.com/MaryGloria01" target="_blank" aria-label="Twitter" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></a>
             </div>
-            <p>&copy; 2025 Nwanochiri Ogochukwu Gloria. All Rights Reserved.</p>
+            <p>&copy; 2025 Nwanochiri Ogochukwu GloriaMary. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <div id="project-one-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn"><i data-lucide="x"></i></button>
+            <h3 class="modal-title">E-commerce Platform Showcase</h3>
+            <div class="modal-gallery">
+                <img src="https://placehold.co/600x400/c084fc/ffffff?text=E-commerce Feature 1" alt="E-commerce Feature 1">
+                <img src="https://placehold.co/600x400/c084fc/ffffff?text=E-commerce Feature 2" alt="E-commerce Feature 2">
+            </div>
+        </div>
+    </div>
+    <div id="design-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn"><i data-lucide="x"></i></button>
+            <h3 class="modal-title">Client Logo & Flyer Designs</h3>
+            <div class="modal-gallery">
+                <img src="Images/IMG_4125.JPG" alt="Logo Sample">
+                <img src="Images/IMG_4123.JPG" alt="Birthday Flyer">
+                <img src="Images/IMG_4124.JPG" alt="Birthday Flyer">
+                <img src="Images/IMG_4122.JPG" alt="Birthday Flyer">
+                <img src="Images/IMG_4121.JPG" alt="New Month Flyer">
+                <img src="Images/IMG_4120.JPG" alt="Birthday Flyer">
+                <img src="Images/IMG_4119.JPG" alt="Business Registration Flyer">
+                <img src="Images/IMG_4118.JPG" alt="Data Bundle Ad">
+                <img src="Images/IMG_4114.JPG" alt="Social Media Ad">
+            </div>
+        </div>
+    </div>
+    <div id="project-three-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn"><i data-lucide="x"></i></button>
+            <h3 class="modal-title">Portfolio Websites Showcase</h3>
+            <div class="modal-gallery">
+                <img src="https://placehold.co/600x400/fbcfe8/333333?text=Portfolio Example 1" alt="Portfolio Example 1">
+                <img src="https://placehold.co/600x400/fbcfe8/333333?text=Portfolio Example 2" alt="Portfolio Example 2">
+            </div>
+        </div>
+    </div>
 
     <button id="scroll-to-top" aria-label="Scroll to top">
         <i data-lucide="arrow-up"></i>
     </button>
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
     <script src="Portfolio.js"></script>
 </body>
 </html>
