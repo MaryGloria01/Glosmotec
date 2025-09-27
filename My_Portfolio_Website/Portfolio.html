@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nwanochiri Ogochukwu GloriaMary | Creative Technologist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="Portfolio.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">OG.</a>
+            <nav class="main-nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <div class="social-links-header">
+                    <a href="https://www.linkedin.com/in/ogochukwu-gloriamary" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="https://github.com/MaryGloria01" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://x.com/MaryGloria01" target="_blank" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+                <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="sun-icon" data-lucide="sun"></i>
+                    <i class="moon-icon" data-lucide="moon"></i>
+                </button>
+                <button id="mobile-menu-button" class="icon-btn mobile-menu-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div id="mobile-menu" class="mobile-nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-container" data-aos="fade-up">
+                <h1 class="hero-title">Nwanochiri Ogochukwu Gloria</h1>
+                <p class="subtitle">Creative Technologist</p>
+                <p class="hero-text">
+                    Curious innovator with a background in software engineering, AI, and graphic design, passionate about building technology that makes a real impact.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="scroll-down-indicator">
+                <a href="#about" aria-label="Scroll down">
+                    <i data-lucide="arrow-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container about-container">
+                <div class="about-image" data-aos="fade-right" data-aos-delay="200">
+                    <img src="https://placehold.co/400x400/1E293B/94A3B8?text=Your+Photo" alt="Ogochukwu Gloria">
+                </div>
+                <div class="about-content" data-aos="fade-left" data-aos-delay="400">
+                    <h2 class="section-title">About Me</h2>
+                    <p>My passion for technology goes beyond academics. As a student and professional, I'm constantly exploring the intersection of design and functionality. Whether it's crafting intuitive user interfaces, developing intelligent systems with AI, or creating compelling visual identities, I thrive on solving complex problems with creative solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section-title">My Skillset</h2>
+                <div class="skills-grid">
+                    <div class="skill-card"><i data-lucide="layout-template"></i><span>Web Design</span></div>
+                    <div class="skill-card"><i data-lucide="brain-circuit"></i><span>AI Enthusiast</span></div>
+                    <div class="skill-card"><i data-lucide="palette"></i><span>Graphic Design</span></div>
+                    <div class="skill-card"><i data-lucide="lightbulb"></i><span>Creativity</span></div>
+                    <div class="skill-card"><i data-lucide="search-check"></i><span>Critical Thinking</span></div>
+                    <div class="skill-card"><i data-lucide="users-2"></i><span>Teamwork</span></div>
+                    <div class="skill-card"><i data-lucide="message-circle"></i><span>Communication</span></div>
+                    <div class="skill-card"><i data-lucide="award"></i><span>Leadership</span></div>
+                    <div class="skill-card"><i data-lucide="list-checks"></i><span>Organized</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/1E293B/58A6FF?text=Project+One" alt="Project 1">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags"><span>UI/UX</span><span>Web Development</span></div>
+                            <h3 class="project-title">E-commerce Platforms</h3>
+                            <p class="project-description">A full-stack e-commerce website with payment integration and a custom CMS.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-link" target="_blank">Live Demo <i data-lucide="external-link"></i></a>
+                                <a href="#" class="btn-link" target="_blank">View Code <i data-lucide="github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                         <div class="project-image">
+                            <img src="https://placehold.co/600x400/58A6FF/0D1117?text=Project+Two" alt="Project 2">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags"><span>Branding</span><span>Graphic Design</span></div>
+                            <h3 class="project-title">Client Logo & Branding</h3>
+                            <p class="project-description">Created a full brand identity for a local startup, including logo, color palette, and typography.</p>
+                             <div class="project-links">
+                                <a href="#" class="btn-link" target="_blank">View Designs<i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                         <div class="project-image">
+                            <img src="https://placehold.co/600x400/0D1117/94A3B8?text=Project+Three" alt="Project 3">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags"><span>Web Design</span><span>Frontend</span></div>
+                            <h3 class="project-title">Portfolio Websites For Clients</h3>
+                            <p class="project-description">Showcasing user-friendly portfolio websites designed to highlight clients’ skills, achievements and professional identity with a modern digital presence.</p>
+                             <div class="project-links">
+                                <a href="#" class="btn-link" target="_blank">Live Demo <i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container" data-aos="fade-up">
+                <div class="title-wrapper">
+                    <h2 class="section-title">My Journey</h2>
+                </div>
+                <div class="timeline">
+                     <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <p class="timeline-date">2024 - Present</p>
+                            <h3>BSc in Computer Science</h3>
+                            <p class="timeline-company">University of Kigali</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                         <div class="timeline-content">
+                            <p class="timeline-date">2022 - 2023</p>
+                            <h3>Software Engineering Certificate</h3>
+                            <p class="timeline-company">ALX Africa</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                         <div class="timeline-content">
+                            <p class="timeline-date">Jan 2021 - Present</p>
+                            <h3>Freelance Graphic Designer</h3>
+                            <p class="timeline-company">Glosmotec</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container contact-container" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p>I'm currently open to new opportunities and collaborations. My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <a href="mailto:ogochukwunwanochiri@gmail.com" class="btn btn-primary email-btn">
+                    <i data-lucide="mail"></i> Say Hello
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/ogochukwu-gloriamary" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="https://github.com/MaryGloria01" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="https://x.com/MaryGloria01" target="_blank" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Nwanochiri Ogochukwu Gloria. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <script src="Portfolio.js"></script>
+</body>
+</html>

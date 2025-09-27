@@ -1,0 +1,44 @@
+::selection {
+	background: #56e000;
+	color: rgb(236, 240, 93);
+}
+html {
+	background-color: rgb(255, 255, 255);
+	font-size: 14px;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	min-width: 300px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+*, ::before, ::after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+html {
+	font-size: 14px;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+}
+body {
+	color: #4a4a4a;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.5;
+}
