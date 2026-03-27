@@ -6,7 +6,7 @@ Software Engineer with a passion for building intuitive digital experiences. I c
 
 - Building responsive web applications with **React.js** and modern JavaScript
 - Creating user-centered designs that solve real problems
-- Pursuing my **BSc in Computer Science** at University of Kigali
+- Pursuing my **BSc (Hons) in Computer Science** at University of Kigali
 - ALX Africa Software Engineering graduate
 
 ## Tech Stack
