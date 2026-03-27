@@ -312,14 +312,16 @@ html[data-theme='light'] #theme-toggle .moon-icon { display: block; }
 
 /* Projects Section */
 .project-grid { display: grid; gap: 2rem; }
-.project-card { 
-    background-color: var(--card-bg-color); 
+.project-card {
+    background-color: var(--card-bg-color);
     border: 1px solid var(--border-color);
-    border-radius: 16px; 
-    overflow: hidden; 
-    transition: all 0.3s ease; 
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
     box-shadow: 0 5px 20px var(--box-shadow-color);
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 .project-card:hover { 
     transform: translateY(-8px);
@@ -333,19 +335,31 @@ html[data-theme='light'] #theme-toggle .moon-icon { display: block; }
     object-fit: cover;
 }
 .project-card:hover .project-image img { transform: scale(1.05); }
-.project-content { padding: 1.5rem; }
-.project-tags {
-    justify-content: flex-start;
+.project-content {
+    padding: 1.5rem;
+    flex-grow: 1;
     display: flex;
-    gap: 0.5rem;
+    flex-direction: column;
+}
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
     margin-bottom: 0.75rem;
 }
-.project-tags span { 
-    background-color: var(--accent-color); color: #fff;
-    font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.8rem; border-radius: 50px; 
+.project-tags span {
+    background: linear-gradient(135deg, var(--accent-color), #8b5cf6);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 html[data-theme='dark'] .project-tags span {
-    color: var(--bg-dark);
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    color: #fff;
 }
 .project-title { font-size: 1.6rem; margin-bottom: 0.5rem; }
 .project-description {
@@ -353,7 +367,9 @@ html[data-theme='dark'] .project-tags span {
     opacity: 0.8;
     margin-bottom: 1rem;
 }
-.project-links { justify-content: flex-start; }
+.project-links {
+    justify-content: flex-start;
+}
 .btn-link { 
     display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600;
     background: none; border: none; padding: 0; cursor: none;
