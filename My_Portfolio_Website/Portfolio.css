@@ -65,10 +65,10 @@ body {
     cursor: none;
     line-height: 1.7;
 }
-.container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+.container { max-width: 1400px; margin: 0 auto; padding: 0 4rem; }
 img { max-width: 100%; display: block; height: auto; }
 a, button { color: var(--accent-color); text-decoration: none; transition: all 0.3s ease; }
-section { padding: 5rem 0; overflow: hidden; position: relative; }
+section { padding: 6rem 0; overflow: hidden; position: relative; }
 h1, h2, h3, h4 { font-family: var(--font-headings); color: var(--text-color); font-weight: 700; }
 
 /* ------------------- */
@@ -143,7 +143,39 @@ html[data-theme='light'] #theme-toggle .moon-icon { display: block; }
     display: flex; 
     transform: translateY(0);
 }
-.mobile-nav a { padding: 1rem 1.5rem; font-weight: 500; border-bottom: 1px solid var(--border-color); }
+.mobile-nav a {
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    transition: all 0.3s ease;
+}
+.mobile-nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(180deg, var(--accent-color), var(--secondary-accent));
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+.mobile-nav a:hover {
+    color: var(--accent-color);
+    background-color: rgba(79, 70, 229, 0.05);
+    padding-left: 2rem;
+}
+.mobile-nav a.active {
+    color: #fff;
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-accent));
+    font-weight: 600;
+    padding-left: 2rem;
+}
+.mobile-nav a.active::before {
+    transform: scaleY(1);
+    background: #fff;
+}
 
 /* ------------------- */
 /* 5. Hero Section     */
@@ -154,9 +186,9 @@ html[data-theme='light'] #theme-toggle .moon-icon { display: block; }
     align-items: center;
     background: radial-gradient(ellipse at bottom right, var(--secondary-accent) -20%, transparent 40%);
 }
-.hero-container { 
-    display: flex; align-items: center; justify-content: space-between; 
-    gap: 3rem; 
+.hero-container {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 5rem;
 }
 .hero-content {
     max-width: 600px;
@@ -204,7 +236,7 @@ html[data-theme='light'] #theme-toggle .moon-icon { display: block; }
 }
 
 .hero-image img {
-    max-width: 400px;
+    max-width: 480px;
     border-radius: 16px;
     animation: fadeInScale 1s ease-out forwards;
 }
@@ -591,28 +623,43 @@ html[data-theme='dark'] .footer-social a:hover {
     }
 }
 @media (min-width: 768px) {
-    .main-nav { display: flex; gap: 0.5rem; align-items: center; }
-    .nav-link { 
-        font-weight: 500; 
+    .main-nav { display: flex; gap: 3rem; align-items: center; }
+    .nav-link {
+        font-weight: 500;
         position: relative;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0;
         font-size: 0.95rem;
-        border-radius: 8px;
         transition: all 0.3s ease;
-        border: 2px solid var(--accent-color);
-        background-color: transparent;
+        color: var(--text-color);
+    }
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--accent-color), var(--secondary-accent));
+        transition: width 0.3s ease;
+    }
+    /* Hover: just color and lift */
+    .nav-link:hover {
+        color: var(--accent-color);
+        transform: translateY(-2px);
+    }
+    /* Active: gradient underline */
+    .nav-link.active {
         color: var(--accent-color);
     }
-    .nav-link:hover, .nav-link.active {
-        background-color: var(--accent-color);
-        color: #fff;
+    .nav-link.active::after {
+        width: 100%;
     }
     html[data-theme='dark'] .nav-link {
-        color: var(--accent-color);
+        color: var(--text-dark);
     }
     html[data-theme='dark'] .nav-link:hover,
     html[data-theme='dark'] .nav-link.active {
-        color: var(--bg-dark);
+        color: var(--accent-color);
     }
     .mobile-menu-toggle { display: none; }
     .social-links-header { display: flex; }
