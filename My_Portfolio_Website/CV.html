@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Nwanochiri Ogochukwu GloriaMary</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%234f46e5'/><stop offset='100%25' stop-color='%23818cf8'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23g)'/><text x='50' y='65' font-size='45' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>OG</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .cv-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 300px 1fr;
+        }
+
+        /* Sidebar - Matching Portfolio Colors */
+        .sidebar {
+            background: #111827;
+            color: #fff;
+            padding: 40px 25px;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4f46e5;
+            margin: 0 auto 25px;
+            display: block;
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+        }
+        .sidebar h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 25px 0 15px;
+            padding: 10px 12px;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.3), rgba(129, 140, 248, 0.15));
+            border-left: 3px solid #4f46e5;
+            border-radius: 0 6px 6px 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sidebar h2 i {
+            color: #a78bfa;
+            font-size: 14px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        .contact-item i {
+            color: #4f46e5;
+            width: 16px;
+            margin-top: 3px;
+        }
+        .contact-item a {
+            color: #fff;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .contact-item a:hover {
+            color: #818cf8;
+        }
+
+        /* Skills */
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        .skill-category h3 {
+            font-size: 12px;
+            color: #818cf8;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .skill-tag {
+            background: #4f46e5;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+        }
+
+        /* Languages */
+        .language-item {
+            margin-bottom: 10px;
+        }
+        .language-name {
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        .language-level {
+            display: flex;
+            gap: 4px;
+        }
+        .language-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #374151;
+        }
+        .language-dot.filled {
+            background: #4f46e5;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px;
+        }
+        .header {
+            margin-bottom: 30px;
+        }
+        .name {
+            font-size: 36px;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.2;
+        }
+        .title {
+            font-size: 18px;
+            color: #4f46e5;
+            font-weight: 600;
+            margin: 5px 0 15px;
+        }
+        .summary {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111827;
+            padding-bottom: 10px;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(90deg, #4f46e5, #818cf8) 1;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* Experience & Education Items */
+        .item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: #4f46e5;
+            border-radius: 50%;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .item-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+        }
+        .item-date {
+            background: #4f46e5;
+            color: #fff;
+            padding: 3px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 500;
+            box-shadow: none;
+            text-shadow: none;
+            filter: none;
+            border: none;
+        }
+        .item-subtitle {
+            font-size: 14px;
+            color: #4f46e5;
+            font-weight: 500;
+            margin: 3px 0 8px;
+        }
+        .item-description {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.7;
+        }
+        .item-description ul {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        .item-description li {
+            margin-bottom: 3px;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            gap: 15px;
+        }
+        .project-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4f46e5;
+        }
+        .project-name {
+            font-weight: 600;
+            color: #111827;
+            font-size: 14px;
+        }
+        .project-tech {
+            font-size: 11px;
+            color: #4f46e5;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+        .project-desc {
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: #fff;
+            }
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                padding: 30px 20px;
+            }
+            .main-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="Images/Myself2.jpeg" alt="Nwanochiri Ogochukwu GloriaMary" class="profile-img">
+
+            <h2><i class="fas fa-address-card"></i> Contact</h2>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+234 813 933 7952</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:ogochukwunwanochiri@gmail.com">ogochukwunwanochiri@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Remera St., Kigali, Rwanda</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://linkedin.com/in/ogochukwu-gloriamary" target="_blank" rel="noopener noreferrer">linkedin.com/in/ogochukwu-gloriamary</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/MaryGloria01" target="_blank" rel="noopener noreferrer">github.com/MaryGloria01</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <a href="https://ogochukwugloriamary.netlify.app" target="_blank" rel="noopener noreferrer">ogochukwugloriamary.netlify.app</a>
+            </div>
+
+            <h2><i class="fas fa-code"></i> Technical Skills</h2>
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">C</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks & Libraries</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Flask</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Platforms</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Linux</span>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-lightbulb"></i> Soft Skills</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Communication</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Teamwork</span>
+                <span class="skill-tag">Time Management</span>
+                <span class="skill-tag">Creativity</span>
+            </div>
+
+            <h2><i class="fas fa-language"></i> Languages</h2>
+            <div class="language-item">
+                <div class="language-name">English</div>
+                <div class="language-level">
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot filled"></span>
+                </div>
+            </div>
+            <div class="language-item">
+                <div class="language-name">Igbo</div>
+                <div class="language-level">
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot filled"></span>
+                </div>
+            </div>
+            <div class="language-item">
+                <div class="language-name">Kinyarwanda</div>
+                <div class="language-level">
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot filled"></span>
+                    <span class="language-dot"></span>
+                    <span class="language-dot"></span>
+                    <span class="language-dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1 class="name">Nwanochiri Ogochukwu GloriaMary</h1>
+                <p class="title">Software Engineer | UI/UX Designer | Graphic Designer | Creative Technologist</p>
+                <p class="summary">
+                    Results-driven Software Engineer and Creative Technologist with 4+ years of experience in web development, UI/UX design and graphic design. Passionate about building user-centric digital solutions that combine technical excellence with creative innovation. Currently pursuing a BSc (Hons) in Computer Science while actively developing fullstack applications and brand identities for clients worldwide.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Work Experience</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Freelance Software Engineer & Graphic Designer</span>
+                        <span class="item-date">Jan 2021 - Present</span>
+                    </div>
+                    <div class="item-subtitle">Glosmotec | Selgo Designs | Remote</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Designed and developed 50+ websites, logos and brand identities for clients across multiple industries</li>
+                            <li>Built fullstack e-commerce platforms with payment integration using React.js, Node.js and MySQL</li>
+                            <li>Created responsive, accessible web applications following modern UI/UX best practices</li>
+                            <li>Managed end-to-end project delivery, from client consultation to final deployment</li>
+                            <li>Achieved 100% client satisfaction rate through clear communication and quality delivery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Sales Representative</span>
+                        <span class="item-date">Jan 2020 - Dec 2021</span>
+                    </div>
+                    <div class="item-subtitle">Dubros International Agency | Nigeria</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Managed customer relationships and conducted product demonstrations</li>
+                            <li>Handled business finances, record-keeping and bank transactions</li>
+                            <li>Developed strong organizational and customer service skills</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Academic Prefect</span>
+                        <span class="item-date">Sept 2018 - Sept 2019</span>
+                    </div>
+                    <div class="item-subtitle">Mater Christi Secondary School | Awada, Nigeria</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Led and coordinated academic activities for the student body</li>
+                            <li>Served as liaison between students and school administration</li>
+                            <li>Developed leadership, organizational and communication skills</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">BSc (Hons) Computer Science</span>
+                        <span class="item-date">2024 - Present</span>
+                    </div>
+                    <div class="item-subtitle">University of Kigali | Kacyiru, Kigali, Rwanda</div>
+                    <div class="item-description">
+                        Relevant coursework: Data Structures, Algorithms, Database Management, Software Engineering, AI/ML
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Software Engineering Certificate</span>
+                        <span class="item-date">2022 - 2023</span>
+                    </div>
+                    <div class="item-subtitle">ALX Africa</div>
+                    <div class="item-description">
+                        Intensive 12-month program covering full-stack development, system design, DevOps and collaborative software development practices.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Key Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div class="project-name">Everything Chommzy - E-commerce Platform</div>
+                        <div class="project-tech">React.js | Node.js | PHP | MySQL | Payment Integration</div>
+                        <div class="project-desc">Fullstack e-commerce website with product catalog, user authentication, shopping cart and secure payment processing.</div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-name">Empowering African Women - E-learning Platform</div>
+                        <div class="project-tech">HTML | CSS | JavaScript | PHP | MySQL</div>
+                        <div class="project-desc">Educational platform with courses, user dashboard, certificate system and career mentorship features.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="item">
+                    <div class="item-description">
+                        <ul>
+                            <li><strong>ALX Software Engineering Certificate</strong> - ALX Africa (2023)</li>
+                            <li><strong>Responsive Web Design</strong> - freeCodeCamp</li>
+                            <li><strong>JavaScript Algorithms & Data Structures</strong> - freeCodeCamp</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
