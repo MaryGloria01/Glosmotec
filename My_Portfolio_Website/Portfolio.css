@@ -1257,6 +1257,8 @@ html[data-theme='dark'] .form-group textarea {
     color: var(--text-color);
     font-size: 0.95rem;
     font-weight: 500;
+    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 .contact-card-content a:hover {
     color: var(--accent-color);
