@@ -1,6 +1,6 @@
 # Glosmotec Brand Projects & Personal Portfolio
 
-This repository serves as the central hub for all projects related to my brand, **Glosmotec** and also contains the source code for my personal portfolio website.
+This repository serves as the central hub for all projects related to my brand **Glosmotec** and also contains the source code for my personal portfolio website.
 
 ---
 
